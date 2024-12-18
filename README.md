@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# Land Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the Land Management System, a web application built with React and Bootstrap for managing land-related data. The system allows users to sign up, sign in, view land details, and add new land entries.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Sign In**: User authentication to access the system.
+- **Sign Up**: Create a new account to use the system.
+- **Get Land**: View a list of available lands.
+- **Add Land**: Add new land details, including location, cost, size, owner, plot number, and a photo.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React, React Router, Bootstrap
+- **Backend API**: PythonAnywhere (hosted API for managing land data)
+- **Styling**: CSS and Bootstrap
+- **HTTP Requests**: Axios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Components
 
-### `npm test`
+### Main Components
+- **`App.js`**: The main application file that sets up routing and navigation.
+- **`SignIn`**: Component for user login.
+- **`SignUp`**: Component for user registration.
+- **`GetLand`**: Component to fetch and display available land details.
+- **`AddLand`**: Component to add new land information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### External Libraries
+- `react-router-dom`: For routing between pages.
+- `axios`: For making HTTP requests.
+- `bootstrap`: For responsive design and styling.
 
-### `npm run build`
+## Setup and Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Make sure you have the following installed:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js and npm
+- A code editor (e.g., Visual Studio Code)
 
-### `npm run eject`
+### Steps
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone https://github.com/your-username/land-management-system.git
+   cd land-management-system
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Open your browser and navigate to:
 
-### Code Splitting
+   ```
+   http://localhost:3000
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## API Endpoints
 
-### Analyzing the Bundle Size
+The system communicates with the backend API hosted on PythonAnywhere. Below are the key endpoints:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Sign In**: `POST /api/signin`
+- **Sign Up**: `POST /api/signup`
+- **Add Land**: `POST /api/add_land`
 
-### Making a Progressive Web App
+## File Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```plaintext
+src/
+├── App.css         # Global styles
+├── App.js          # Main application component
+├── components/     # Individual components
+│   ├── AddLand.js  # Add land form component
+│   ├── GetLand.js  # Fetch and display land details
+│   ├── SignIn.js   # User login form
+│   ├── SignUp.js   # User registration form
+└── index.js        # Application entry point
+```
 
-### Advanced Configuration
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Landing Page
+![Landing Page](link-to-screenshot)
 
-### Deployment
+### Add Land Form
+![Add Land Form](link-to-screenshot)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+Contributions are welcome! Please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+Feel free to reach out with any questions or suggestions!
