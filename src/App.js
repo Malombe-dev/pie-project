@@ -5,12 +5,12 @@ import SignIn from './components/SignIn';
 import Getland from './components/Getland';
 import AddLand from './components/AddLand';
 import SignUp from './components/SignUp';
-// import bootstrap 
+// import bootstrap for styling
 import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
   return (
-     <Router>
+    <Router>
       <div className="">
         <header className="">
         <h1>Land Management System</h1>
@@ -23,13 +23,12 @@ function App() {
               <Routes>
                  <Route path='/signin' element = {<SignIn/>} />
                  <Route path='/signup' element = {<SignUp/>} />
-                 <Route path='/' element = {<Getland/>} />
-                 <Route path='/addland' element = {<AddLand/>} />
-
+                 <Route path='/'       element = {<Getland/>} />
+                 <Route path='/addland'element = {<AddLand/>} />
               </Routes>
         </header>
       </div>
-      </Router>
+    </Router>
   );
 }
 

@@ -1,11 +1,12 @@
 
 import axios from 'axios';
-import React, { useDeferredValue, useState } from 'react';
-import { useFetcher } from 'react-router-dom';
+import React, {  useState } from 'react';
+
 import { Link } from 'react-router-dom';
 
 
 const SignUp = () => {
+  
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -19,7 +20,6 @@ const SignUp = () => {
   // a fuction to handle form submit 
   const handleSubmit = async(e) =>{
     e.preventDefault()
-
     // we are going to use multipart form data 
     // formdata is an inbult JS  object used to construct a set of key value pairs 
     // we append the values to the object 
@@ -39,16 +39,12 @@ const SignUp = () => {
         setLoading(false)
         // console.log(response.data)
         setSuccess(response?.data?.message)
-
         // you need to reset the form fields to be empty
-      }
-      
+      }    
     } catch (error) {
       setLoading(false)
       setError(error?.message)
-      
     }
-
   }
     return ( 
         <div className="App">
